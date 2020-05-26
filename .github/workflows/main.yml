@@ -20,7 +20,7 @@ jobs:
         uses: jakepartusch/wait-for-netlify-action@v1
         id: waitFor200
         with:
-          site_name: "gallant-panini-bc8593"
+          site_name: "modest-murdock-6e792e"
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
