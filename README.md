@@ -1,4 +1,4 @@
-# blog
+# Ligthouse CI action and Netlify Example
 
 ## CLI Commands
 
