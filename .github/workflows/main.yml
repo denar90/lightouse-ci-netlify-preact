@@ -25,6 +25,7 @@ jobs:
         uses: denar90/wait-for-netlify-action@master
         id: waitFor200
         with:
+          token: ${{ secrets.GH_ACCESS_TOKEN }}
           site_id: "12771bc4-662a-4b33-bcf0-cba7a803b3ee"
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
