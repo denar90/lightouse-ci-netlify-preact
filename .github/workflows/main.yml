@@ -22,10 +22,10 @@ jobs:
         run: |
           yarn run build
       - name: Waiting for 200 from the Netlify Preview
-        uses: jakepartusch/wait-for-netlify-action@v1
+        uses: denar90/wait-for-netlify-action@master
         id: waitFor200
         with:
-          site_name: "modest-murdock-6e792e"
+          site_id: "12771bc4-662a-4b33-bcf0-cba7a803b3ee"
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
