@@ -15,12 +15,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Install
-        run: |
-          yarn
-      - name: Build
-        run: |
-          yarn run build
       - name: Waiting for 200 from the Netlify Preview
         uses: denar90/wait-for-netlify-action@master
         id: waitFor200
