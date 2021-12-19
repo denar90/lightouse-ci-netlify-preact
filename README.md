@@ -1,4 +1,4 @@
-# Blog
+# Blog!
 
 ## CLI Commands
 
