@@ -1,0 +1,10 @@
+{
+	"ci": {
+	  "collect": {
+		  "numberOfRuns": 5
+	  },
+	  "assert": {
+		  "preset": "lighthouse:no-pwa"
+	  }
+	}
+}
