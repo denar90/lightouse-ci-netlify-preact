@@ -15,6 +15,10 @@ jobs:
         id: waitFor200
         with:
           site_id: "12771bc4-662a-4b33-bcf0-cba7a803b3ee"
+      - name: Set LHCI config
+        shell: bash
+        run: echo "::set-output name=file::${github.event_name == 'pull_request' && 'lighthouserc-assertions-preview.json' || 'lighthouserc-assertions.json'}"
+        id: lhciConfig
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
@@ -22,6 +26,6 @@ jobs:
             ${{ steps.waitFor200.outputs.url }}
             ${{ steps.waitFor200.outputs.url }}/blogs/
             ${{ steps.waitFor200.outputs.url }}/contact/
-          budgetPath: ./budget.json # test performance budgets
+          configPath: '.github/${lhciConfig.file}'
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
