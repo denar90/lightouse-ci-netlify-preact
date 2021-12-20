@@ -26,6 +26,6 @@ jobs:
             ${{ steps.waitFor200.outputs.url }}
             ${{ steps.waitFor200.outputs.url }}/blogs/
             ${{ steps.waitFor200.outputs.url }}/contact/
-          configPath: '.github/${{lhciConfig.file}}'
+          configPath: '.github/${{ steps.lhciConfig.file }}'
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
